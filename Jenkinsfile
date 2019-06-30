@@ -6,16 +6,16 @@ pipeline {
         echo 'Building'
       }
     }
-    stage('Test firefox') {
+    stage('Test') {
       parallel {
         stage('Test firefox') {
           steps {
-            sh 'echo "TEST Fzirelkjl"'
+            sh 'echo "TEST Firefox"'
           }
         }
         stage('Test Chrome') {
           steps {
-            sh 'echo "Test chrome"'
+            sh 'echo "Test chrome"; exit 1'
           }
         }
         stage('Test Edge') {
